@@ -1,0 +1,4 @@
+# Keep exact bytes so integrity.sha256 is stable across Windows/Linux checkouts.
+* -text
+*.png binary
+*.exe binary

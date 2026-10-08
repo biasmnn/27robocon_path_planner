@@ -1,0 +1,6 @@
+# Python 3.10+; tested with 64-bit Python 3.10.11 on Windows.
+# scipy is required by the costmap and spline implementation.
+numpy==2.2.6
+Pillow==12.3.0
+scipy==1.15.3
+PySide6-Essentials==6.7.2

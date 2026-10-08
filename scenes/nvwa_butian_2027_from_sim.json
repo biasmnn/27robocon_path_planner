@@ -1,0 +1,1387 @@
+{
+  "version": 1,
+  "meta": {
+    "name": "nvwa_butian_2027_from_sim",
+    "note": "源OBJ/SDF生成；TR仅经坡道/阶梯地面端口登高；禁止侧入和进入L1/L2。",
+    "origin_note": "场地中心；+x东(蓝)、+y北；红x<0；mm；yaw逆时针为正",
+    "schema_version": 2,
+    "last_edited": "2026-10-06",
+    "sim_source": "D:\\robocon_27th\\27th_gap_gazebo_model\\gazebo_models-main",
+    "assumed_items": [
+      "stack marker positions"
+    ]
+  },
+  "field_size": 11000.0,
+  "extent": [
+    -5600.0,
+    -5600.0,
+    5600.0,
+    5600.0
+  ],
+  "resolution": 25.0,
+  "robot_radius": 300.0,
+  "safety_margin": 5.0,
+  "obstacles": [
+    {
+      "type": "rect",
+      "cx": -0.0,
+      "cy": 5500.0,
+      "w": 11000.0,
+      "h": 50.00000000000071,
+      "name": "场地围栏(北)",
+      "tag": "fence",
+      "layer": "ground",
+      "group": "fixed",
+      "source": "sim model.sdf/collision_wall_right; rule 2.21",
+      "enabled": true,
+      "sim_z_range_m": [
+        0.0,
+        0.08
+      ]
+    },
+    {
+      "type": "rect",
+      "cx": -0.0,
+      "cy": -5500.0,
+      "w": 11000.0,
+      "h": 50.00000000000071,
+      "name": "场地围栏(南)",
+      "tag": "fence",
+      "layer": "ground",
+      "group": "fixed",
+      "source": "sim model.sdf/collision_wall_left; rule 2.21",
+      "enabled": true,
+      "sim_z_range_m": [
+        0.0,
+        0.08
+      ]
+    },
+    {
+      "type": "rect",
+      "cx": 5500.0,
+      "cy": 0.0,
+      "w": 50.00000000000071,
+      "h": 11000.0,
+      "name": "场地围栏(东)",
+      "tag": "fence",
+      "layer": "ground",
+      "group": "fixed",
+      "source": "sim model.sdf/collision_wall_front; rule 2.21",
+      "enabled": true,
+      "sim_z_range_m": [
+        0.0,
+        0.08
+      ]
+    },
+    {
+      "type": "rect",
+      "cx": -5500.0,
+      "cy": 0.0,
+      "w": 50.00000000000071,
+      "h": 11000.0,
+      "name": "场地围栏(西)",
+      "tag": "fence",
+      "layer": "ground",
+      "group": "fixed",
+      "source": "sim model.sdf/collision_wall_back; rule 2.21",
+      "enabled": true,
+      "sim_z_range_m": [
+        0.0,
+        0.08
+      ]
+    },
+    {
+      "type": "rect",
+      "cx": -0.0,
+      "cy": 0.0,
+      "w": 6000.0,
+      "h": 6000.0,
+      "name": "L1 台体(地面层不可进入)",
+      "tag": "l1_body",
+      "layer": "ground",
+      "group": "fixed",
+      "source": "sim model.sdf/collision_l1; rule 2.15",
+      "enabled": true,
+      "sim_z_range_m": [
+        0.0,
+        0.6
+      ]
+    },
+    {
+      "type": "rect",
+      "cx": -0.0,
+      "cy": 0.0,
+      "w": 50.0,
+      "h": 11000.0,
+      "name": "中央隔板",
+      "tag": "divider",
+      "layer": "ground",
+      "group": "fixed",
+      "source": "sim model.sdf/collision_center_divider; rule 2.21",
+      "enabled": true,
+      "sim_z_range_m": [
+        0.0,
+        0.08
+      ]
+    },
+    {
+      "type": "circle",
+      "cx": -0.0,
+      "cy": 4150.0,
+      "r": 135.00000000000023,
+      "name": "五色石基座",
+      "tag": "pedestal",
+      "layer": "ground",
+      "enabled": true,
+      "group": "fixed",
+      "source": "sim robocon_000.obj",
+      "sim_z_range_m": [
+        0.0,
+        0.5
+      ]
+    },
+    {
+      "type": "circle",
+      "cx": -0.0,
+      "cy": 0.0,
+      "r": 135.0,
+      "name": "中央基座",
+      "tag": "pedestal",
+      "layer": "L2",
+      "enabled": true,
+      "group": "fixed",
+      "source": "sim robocon_001.obj",
+      "sim_z_range_m": [
+        0.9,
+        1.7
+      ]
+    },
+    {
+      "type": "rect",
+      "cx": -5300.0,
+      "cy": 4750.0,
+      "w": 350.0,
+      "h": 350.0,
+      "name": "料堆R1",
+      "tag": "stack",
+      "layer": "ground",
+      "enabled": false,
+      "group": "dynamic",
+      "source": "assumed positions in measured storage; rule 2.11 size"
+    },
+    {
+      "type": "rect",
+      "cx": -4900.0,
+      "cy": 4750.0,
+      "w": 350.0,
+      "h": 350.0,
+      "name": "料堆R2",
+      "tag": "stack",
+      "layer": "ground",
+      "enabled": false,
+      "group": "dynamic",
+      "source": "assumed positions in measured storage; rule 2.11 size"
+    },
+    {
+      "type": "rect",
+      "cx": -4500.0,
+      "cy": 4750.0,
+      "w": 350.0,
+      "h": 350.0,
+      "name": "料堆R3",
+      "tag": "stack",
+      "layer": "ground",
+      "enabled": false,
+      "group": "dynamic",
+      "source": "assumed positions in measured storage; rule 2.11 size"
+    },
+    {
+      "type": "rect",
+      "cx": -4100.0,
+      "cy": 4750.0,
+      "w": 350.0,
+      "h": 350.0,
+      "name": "料堆R4",
+      "tag": "stack",
+      "layer": "ground",
+      "enabled": false,
+      "group": "dynamic",
+      "source": "assumed positions in measured storage; rule 2.11 size"
+    },
+    {
+      "type": "rect",
+      "cx": -3700.0,
+      "cy": 4750.0,
+      "w": 350.0,
+      "h": 350.0,
+      "name": "料堆R5",
+      "tag": "stack",
+      "layer": "ground",
+      "enabled": false,
+      "group": "dynamic",
+      "source": "assumed positions in measured storage; rule 2.11 size"
+    },
+    {
+      "type": "rect",
+      "cx": -5300.0,
+      "cy": 5250.0,
+      "w": 350.0,
+      "h": 350.0,
+      "name": "料堆R6",
+      "tag": "stack",
+      "layer": "ground",
+      "enabled": false,
+      "group": "dynamic",
+      "source": "assumed positions in measured storage; rule 2.11 size"
+    },
+    {
+      "type": "rect",
+      "cx": -4900.0,
+      "cy": 5250.0,
+      "w": 350.0,
+      "h": 350.0,
+      "name": "料堆R7",
+      "tag": "stack",
+      "layer": "ground",
+      "enabled": false,
+      "group": "dynamic",
+      "source": "assumed positions in measured storage; rule 2.11 size"
+    },
+    {
+      "type": "rect",
+      "cx": -4500.0,
+      "cy": 5250.0,
+      "w": 350.0,
+      "h": 350.0,
+      "name": "料堆R8",
+      "tag": "stack",
+      "layer": "ground",
+      "enabled": false,
+      "group": "dynamic",
+      "source": "assumed positions in measured storage; rule 2.11 size"
+    },
+    {
+      "type": "rect",
+      "cx": -4100.0,
+      "cy": 5250.0,
+      "w": 350.0,
+      "h": 350.0,
+      "name": "料堆R9",
+      "tag": "stack",
+      "layer": "ground",
+      "enabled": false,
+      "group": "dynamic",
+      "source": "assumed positions in measured storage; rule 2.11 size"
+    },
+    {
+      "type": "rect",
+      "cx": -3700.0,
+      "cy": 5250.0,
+      "w": 350.0,
+      "h": 350.0,
+      "name": "料堆R10",
+      "tag": "stack",
+      "layer": "ground",
+      "enabled": false,
+      "group": "dynamic",
+      "source": "assumed positions in measured storage; rule 2.11 size"
+    },
+    {
+      "type": "rect",
+      "cx": 3700.0,
+      "cy": 4750.0,
+      "w": 350.0,
+      "h": 350.0,
+      "name": "料堆B1",
+      "tag": "stack",
+      "layer": "ground",
+      "enabled": false,
+      "group": "dynamic",
+      "source": "assumed positions in measured storage; rule 2.11 size"
+    },
+    {
+      "type": "rect",
+      "cx": 4100.0,
+      "cy": 4750.0,
+      "w": 350.0,
+      "h": 350.0,
+      "name": "料堆B2",
+      "tag": "stack",
+      "layer": "ground",
+      "enabled": false,
+      "group": "dynamic",
+      "source": "assumed positions in measured storage; rule 2.11 size"
+    },
+    {
+      "type": "rect",
+      "cx": 4500.0,
+      "cy": 4750.0,
+      "w": 350.0,
+      "h": 350.0,
+      "name": "料堆B3",
+      "tag": "stack",
+      "layer": "ground",
+      "enabled": false,
+      "group": "dynamic",
+      "source": "assumed positions in measured storage; rule 2.11 size"
+    },
+    {
+      "type": "rect",
+      "cx": 4900.0,
+      "cy": 4750.0,
+      "w": 350.0,
+      "h": 350.0,
+      "name": "料堆B4",
+      "tag": "stack",
+      "layer": "ground",
+      "enabled": false,
+      "group": "dynamic",
+      "source": "assumed positions in measured storage; rule 2.11 size"
+    },
+    {
+      "type": "rect",
+      "cx": 5300.0,
+      "cy": 4750.0,
+      "w": 350.0,
+      "h": 350.0,
+      "name": "料堆B5",
+      "tag": "stack",
+      "layer": "ground",
+      "enabled": false,
+      "group": "dynamic",
+      "source": "assumed positions in measured storage; rule 2.11 size"
+    },
+    {
+      "type": "rect",
+      "cx": 3700.0,
+      "cy": 5250.0,
+      "w": 350.0,
+      "h": 350.0,
+      "name": "料堆B6",
+      "tag": "stack",
+      "layer": "ground",
+      "enabled": false,
+      "group": "dynamic",
+      "source": "assumed positions in measured storage; rule 2.11 size"
+    },
+    {
+      "type": "rect",
+      "cx": 4100.0,
+      "cy": 5250.0,
+      "w": 350.0,
+      "h": 350.0,
+      "name": "料堆B7",
+      "tag": "stack",
+      "layer": "ground",
+      "enabled": false,
+      "group": "dynamic",
+      "source": "assumed positions in measured storage; rule 2.11 size"
+    },
+    {
+      "type": "rect",
+      "cx": 4500.0,
+      "cy": 5250.0,
+      "w": 350.0,
+      "h": 350.0,
+      "name": "料堆B8",
+      "tag": "stack",
+      "layer": "ground",
+      "enabled": false,
+      "group": "dynamic",
+      "source": "assumed positions in measured storage; rule 2.11 size"
+    },
+    {
+      "type": "rect",
+      "cx": 4900.0,
+      "cy": 5250.0,
+      "w": 350.0,
+      "h": 350.0,
+      "name": "料堆B9",
+      "tag": "stack",
+      "layer": "ground",
+      "enabled": false,
+      "group": "dynamic",
+      "source": "assumed positions in measured storage; rule 2.11 size"
+    },
+    {
+      "type": "rect",
+      "cx": 5300.0,
+      "cy": 5250.0,
+      "w": 350.0,
+      "h": 350.0,
+      "name": "料堆B10",
+      "tag": "stack",
+      "layer": "ground",
+      "enabled": false,
+      "group": "dynamic",
+      "source": "assumed positions in measured storage; rule 2.11 size"
+    },
+    {
+      "type": "rect",
+      "cx": -3500.0,
+      "cy": 950.0000000000001,
+      "w": 1000.0,
+      "h": 3500.0,
+      "name": "坡道(红)",
+      "tag": "ramp_stair",
+      "layer": "L1",
+      "group": "climb",
+      "source": "sim robocon_009.obj; rule 2.16",
+      "enabled": true,
+      "sim_z_range_m": [
+        -0.0,
+        0.596619
+      ],
+      "navigation": {
+        "kind": "ramp",
+        "side": "red",
+        "entry_axis": "y",
+        "top_height_mm": 600.0,
+        "rule": "2.16; 2.18; 3.2.1; 4.3.1; 6.2.1",
+        "ground_end_y_mm": 2700.0
+      }
+    },
+    {
+      "type": "rect",
+      "cx": -3500.0,
+      "cy": -2250.0,
+      "w": 1000.0,
+      "h": 900.0000000000001,
+      "name": "阶梯(红)",
+      "tag": "ramp_stair",
+      "layer": "L1",
+      "group": "climb",
+      "source": "sim exposed treads robocon_010~012.obj; rule 2.16",
+      "enabled": true,
+      "sim_z_range_m": [
+        0.0,
+        0.45
+      ],
+      "navigation": {
+        "kind": "stairs",
+        "side": "red",
+        "entry_axis": "y",
+        "top_height_mm": 600.0,
+        "rule": "2.16; 2.18; 3.2.1; 4.3.1; 6.2.1",
+        "ground_end_y_mm": -2700.0
+      }
+    },
+    {
+      "type": "rect",
+      "cx": -3500.0,
+      "cy": -1300.0,
+      "w": 1000.0,
+      "h": 1000.0,
+      "name": "传递区(红)",
+      "tag": "transfer",
+      "layer": "L1",
+      "group": "transfer",
+      "source": "sim robocon_013.obj top landing; rule 2.18",
+      "enabled": false,
+      "sim_z_range_m": [
+        0.45,
+        0.6
+      ],
+      "navigation": {
+        "kind": "transfer",
+        "side": "red",
+        "entry_axis": "y",
+        "top_height_mm": 600.0,
+        "rule": "2.16; 2.18; 3.2.1; 4.3.1; 6.2.1"
+      }
+    },
+    {
+      "type": "rect",
+      "cx": 3500.0,
+      "cy": 950.0000000000001,
+      "w": 1000.0,
+      "h": 3500.0,
+      "name": "坡道(蓝)",
+      "tag": "ramp_stair",
+      "layer": "L1",
+      "group": "climb",
+      "source": "sim robocon_014.obj; rule 2.16",
+      "enabled": true,
+      "sim_z_range_m": [
+        -0.0,
+        0.596619
+      ],
+      "navigation": {
+        "kind": "ramp",
+        "side": "blue",
+        "entry_axis": "y",
+        "top_height_mm": 600.0,
+        "rule": "2.16; 2.18; 3.2.1; 4.3.1; 6.2.1",
+        "ground_end_y_mm": 2700.0
+      }
+    },
+    {
+      "type": "rect",
+      "cx": 3500.0,
+      "cy": -2250.0,
+      "w": 1000.0,
+      "h": 900.0000000000001,
+      "name": "阶梯(蓝)",
+      "tag": "ramp_stair",
+      "layer": "L1",
+      "group": "climb",
+      "source": "sim exposed treads robocon_015~017.obj; rule 2.16",
+      "enabled": true,
+      "sim_z_range_m": [
+        0.0,
+        0.45
+      ],
+      "navigation": {
+        "kind": "stairs",
+        "side": "blue",
+        "entry_axis": "y",
+        "top_height_mm": 600.0,
+        "rule": "2.16; 2.18; 3.2.1; 4.3.1; 6.2.1",
+        "ground_end_y_mm": -2700.0
+      }
+    },
+    {
+      "type": "rect",
+      "cx": 3500.0,
+      "cy": -1300.0,
+      "w": 1000.0,
+      "h": 1000.0,
+      "name": "传递区(蓝)",
+      "tag": "transfer",
+      "layer": "L1",
+      "group": "transfer",
+      "source": "sim robocon_018.obj top landing; rule 2.18",
+      "enabled": false,
+      "sim_z_range_m": [
+        0.45,
+        0.6
+      ],
+      "navigation": {
+        "kind": "transfer",
+        "side": "blue",
+        "entry_axis": "y",
+        "top_height_mm": 600.0,
+        "rule": "2.16; 2.18; 3.2.1; 4.3.1; 6.2.1"
+      }
+    },
+    {
+      "type": "rect",
+      "cx": 450.0,
+      "cy": -4600.0,
+      "w": 200.00000000000006,
+      "h": 200.00000000000017,
+      "name": "塔顶1",
+      "tag": "tower_top",
+      "layer": "ground",
+      "group": "dynamic",
+      "source": "sim paired red/blue box halves in robocon_002/003.obj; rule 2.13",
+      "enabled": false,
+      "sim_z_range_m": [
+        0.03,
+        0.23
+      ]
+    },
+    {
+      "type": "rect",
+      "cx": -0.0,
+      "cy": -4600.0,
+      "w": 200.0,
+      "h": 200.00000000000017,
+      "name": "塔顶2",
+      "tag": "tower_top",
+      "layer": "ground",
+      "group": "dynamic",
+      "source": "sim paired red/blue box halves in robocon_002/003.obj; rule 2.13",
+      "enabled": false,
+      "sim_z_range_m": [
+        0.03,
+        0.23
+      ]
+    },
+    {
+      "type": "rect",
+      "cx": -450.0,
+      "cy": -4600.0,
+      "w": 200.00000000000006,
+      "h": 200.00000000000017,
+      "name": "塔顶3",
+      "tag": "tower_top",
+      "layer": "ground",
+      "group": "dynamic",
+      "source": "sim paired red/blue box halves in robocon_002/003.obj; rule 2.13",
+      "enabled": false,
+      "sim_z_range_m": [
+        0.03,
+        0.23
+      ]
+    },
+    {
+      "type": "rect",
+      "cx": 225.0,
+      "cy": -4400.0,
+      "w": 200.0,
+      "h": 200.00000000000017,
+      "name": "塔顶4",
+      "tag": "tower_top",
+      "layer": "ground",
+      "group": "dynamic",
+      "source": "sim paired red/blue box halves in robocon_002/003.obj; rule 2.13",
+      "enabled": false,
+      "sim_z_range_m": [
+        0.03,
+        0.23
+      ]
+    },
+    {
+      "type": "rect",
+      "cx": -225.0,
+      "cy": -4400.0,
+      "w": 200.0,
+      "h": 200.00000000000017,
+      "name": "塔顶5",
+      "tag": "tower_top",
+      "layer": "ground",
+      "group": "dynamic",
+      "source": "sim paired red/blue box halves in robocon_002/003.obj; rule 2.13",
+      "enabled": false,
+      "sim_z_range_m": [
+        0.03,
+        0.23
+      ]
+    },
+    {
+      "type": "rect",
+      "cx": 450.0,
+      "cy": -4199.999999999999,
+      "w": 200.00000000000006,
+      "h": 200.00000000000017,
+      "name": "塔顶6",
+      "tag": "tower_top",
+      "layer": "ground",
+      "group": "dynamic",
+      "source": "sim paired red/blue box halves in robocon_002/003.obj; rule 2.13",
+      "enabled": false,
+      "sim_z_range_m": [
+        0.03,
+        0.23
+      ]
+    },
+    {
+      "type": "rect",
+      "cx": -450.0,
+      "cy": -4199.999999999999,
+      "w": 200.00000000000006,
+      "h": 200.00000000000017,
+      "name": "塔顶7",
+      "tag": "tower_top",
+      "layer": "ground",
+      "group": "dynamic",
+      "source": "sim paired red/blue box halves in robocon_002/003.obj; rule 2.13",
+      "enabled": false,
+      "sim_z_range_m": [
+        0.03,
+        0.23
+      ]
+    },
+    {
+      "type": "rect",
+      "cx": 225.0,
+      "cy": -4000.0,
+      "w": 200.0,
+      "h": 199.99999999999974,
+      "name": "塔顶8",
+      "tag": "tower_top",
+      "layer": "ground",
+      "group": "dynamic",
+      "source": "sim paired red/blue box halves in robocon_002/003.obj; rule 2.13",
+      "enabled": false,
+      "sim_z_range_m": [
+        0.03,
+        0.23
+      ]
+    },
+    {
+      "type": "rect",
+      "cx": -225.0,
+      "cy": -4000.0,
+      "w": 200.0,
+      "h": 199.99999999999974,
+      "name": "塔顶9",
+      "tag": "tower_top",
+      "layer": "ground",
+      "group": "dynamic",
+      "source": "sim paired red/blue box halves in robocon_002/003.obj; rule 2.13",
+      "enabled": false,
+      "sim_z_range_m": [
+        0.03,
+        0.23
+      ]
+    },
+    {
+      "type": "rect",
+      "cx": 450.0,
+      "cy": -3800.0,
+      "w": 200.00000000000006,
+      "h": 199.99999999999974,
+      "name": "塔顶10",
+      "tag": "tower_top",
+      "layer": "ground",
+      "group": "dynamic",
+      "source": "sim paired red/blue box halves in robocon_002/003.obj; rule 2.13",
+      "enabled": false,
+      "sim_z_range_m": [
+        0.03,
+        0.23
+      ]
+    },
+    {
+      "type": "rect",
+      "cx": -0.0,
+      "cy": -3800.0,
+      "w": 200.0,
+      "h": 199.99999999999974,
+      "name": "塔顶11",
+      "tag": "tower_top",
+      "layer": "ground",
+      "group": "dynamic",
+      "source": "sim paired red/blue box halves in robocon_002/003.obj; rule 2.13",
+      "enabled": false,
+      "sim_z_range_m": [
+        0.03,
+        0.23
+      ]
+    },
+    {
+      "type": "rect",
+      "cx": -450.0,
+      "cy": -3800.0,
+      "w": 200.00000000000006,
+      "h": 199.99999999999974,
+      "name": "塔顶12",
+      "tag": "tower_top",
+      "layer": "ground",
+      "group": "dynamic",
+      "source": "sim paired red/blue box halves in robocon_002/003.obj; rule 2.13",
+      "enabled": false,
+      "sim_z_range_m": [
+        0.03,
+        0.23
+      ]
+    }
+  ],
+  "zones": [
+    {
+      "type": "rect",
+      "cx": -2750.0,
+      "cy": 0.0,
+      "w": 5500.0,
+      "h": 11000.0,
+      "name": "红方地面",
+      "tag": "ground_21",
+      "layer": "ground",
+      "group": "reference",
+      "source": "sim robocon_021.obj",
+      "color": "#f0d2d2",
+      "sim_z_range_m": [
+        -0.0001,
+        0.0001
+      ]
+    },
+    {
+      "type": "rect",
+      "cx": 2750.0,
+      "cy": 0.0,
+      "w": 5500.0,
+      "h": 11000.0,
+      "name": "蓝方地面",
+      "tag": "ground_22",
+      "layer": "ground",
+      "group": "reference",
+      "source": "sim robocon_022.obj",
+      "color": "#aad2e6",
+      "sim_z_range_m": [
+        -0.0001,
+        0.0001
+      ]
+    },
+    {
+      "type": "rect",
+      "cx": -0.0,
+      "cy": 0.0,
+      "w": 6000.0,
+      "h": 6000.0,
+      "name": "L1 区",
+      "tag": "l1",
+      "layer": "L1",
+      "group": "reference",
+      "source": "sim model.sdf/collision_l1",
+      "color": "#dcb9a4",
+      "sim_z_range_m": [
+        0.0,
+        0.6
+      ]
+    },
+    {
+      "type": "rect",
+      "cx": -0.0,
+      "cy": 0.0,
+      "w": 3000.0,
+      "h": 3000.0,
+      "name": "L2 区",
+      "tag": "l2",
+      "layer": "L2",
+      "group": "reference",
+      "source": "sim model.sdf/collision_l2",
+      "color": "#c7cbd1",
+      "sim_z_range_m": [
+        0.6,
+        0.9
+      ]
+    },
+    {
+      "type": "rect",
+      "cx": -0.0,
+      "cy": -4250.0,
+      "w": 1200.0,
+      "h": 1199.9999999999998,
+      "name": "地面第一公共区",
+      "tag": "public1",
+      "layer": "ground",
+      "group": "reference",
+      "source": "sim robocon_023.obj; rule 2.7",
+      "color": "#efe9b8",
+      "sim_z_range_m": [
+        0.0019,
+        0.0021
+      ]
+    },
+    {
+      "type": "rect",
+      "cx": -0.0,
+      "cy": 4150.0,
+      "w": 1000.0,
+      "h": 1000.0000000000005,
+      "name": "地面第二公共区",
+      "tag": "public2",
+      "layer": "ground",
+      "group": "reference",
+      "source": "sim robocon_005.obj ground square; rule 2.7",
+      "color": "#efe9b8",
+      "sim_z_range_m": [
+        0.002,
+        0.002
+      ]
+    },
+    {
+      "type": "rect",
+      "cx": -5150.0,
+      "cy": -5150.0,
+      "w": 700.0000000000002,
+      "h": 700.0000000000002,
+      "name": "红启动/重试区A",
+      "tag": "start_red",
+      "layer": "ground",
+      "group": "reference",
+      "source": "sim robocon_002.obj ground patch; rule 2.3",
+      "color": "#df2222",
+      "sim_z_range_m": [
+        0.001,
+        0.001
+      ]
+    },
+    {
+      "type": "rect",
+      "cx": -4350.0,
+      "cy": -5150.0,
+      "w": 700.0000000000002,
+      "h": 700.0000000000002,
+      "name": "红启动/重试区B",
+      "tag": "start_red",
+      "layer": "ground",
+      "group": "reference",
+      "source": "sim robocon_002.obj ground patch; rule 2.3",
+      "color": "#df2222",
+      "sim_z_range_m": [
+        0.001,
+        0.001
+      ]
+    },
+    {
+      "type": "rect",
+      "cx": -4500.0,
+      "cy": 5000.0,
+      "w": 2000.0,
+      "h": 1000.0,
+      "name": "红队储存区",
+      "tag": "storage_red",
+      "layer": "ground",
+      "group": "reference",
+      "source": "sim robocon_002.obj ground patch; rule 2.6",
+      "color": "#e8b4b4",
+      "sim_z_range_m": [
+        0.001,
+        0.001
+      ]
+    },
+    {
+      "type": "rect",
+      "cx": 5150.0,
+      "cy": -5150.0,
+      "w": 700.0000000000002,
+      "h": 700.0000000000002,
+      "name": "蓝启动/重试区A",
+      "tag": "start_blue",
+      "layer": "ground",
+      "group": "reference",
+      "source": "sim robocon_003.obj ground patch; rule 2.3",
+      "color": "#3200ff",
+      "sim_z_range_m": [
+        0.001,
+        0.001
+      ]
+    },
+    {
+      "type": "rect",
+      "cx": 4350.0,
+      "cy": -5150.0,
+      "w": 700.0000000000002,
+      "h": 700.0000000000002,
+      "name": "蓝启动/重试区B",
+      "tag": "start_blue",
+      "layer": "ground",
+      "group": "reference",
+      "source": "sim robocon_003.obj ground patch; rule 2.3",
+      "color": "#3200ff",
+      "sim_z_range_m": [
+        0.001,
+        0.001
+      ]
+    },
+    {
+      "type": "rect",
+      "cx": 4500.0,
+      "cy": 5000.0,
+      "w": 2000.0,
+      "h": 1000.0,
+      "name": "蓝队储存区",
+      "tag": "storage_blue",
+      "layer": "ground",
+      "group": "reference",
+      "source": "sim robocon_003.obj ground patch; rule 2.6",
+      "color": "#9dc6e0",
+      "sim_z_range_m": [
+        0.001,
+        0.001
+      ]
+    },
+    {
+      "type": "rect",
+      "cx": -3500.0,
+      "cy": 950.0000000000001,
+      "w": 1000.0,
+      "h": 3500.0,
+      "name": "坡道(红)",
+      "tag": "ramp_red",
+      "layer": "L1",
+      "group": "reference",
+      "source": "sim robocon_009.obj; rule 2.16",
+      "color": "#e8b4b4",
+      "sim_z_range_m": [
+        -0.0,
+        0.596619
+      ]
+    },
+    {
+      "type": "rect",
+      "cx": -3500.0,
+      "cy": -2250.0,
+      "w": 1000.0,
+      "h": 900.0000000000001,
+      "name": "阶梯(红)",
+      "tag": "stair_red",
+      "layer": "L1",
+      "group": "reference",
+      "source": "sim exposed treads robocon_010~012.obj; rule 2.16",
+      "color": "#e8b4b4",
+      "sim_z_range_m": [
+        0.0,
+        0.45
+      ]
+    },
+    {
+      "type": "rect",
+      "cx": -3500.0,
+      "cy": -1300.0,
+      "w": 1000.0,
+      "h": 1000.0,
+      "name": "传递区(红)",
+      "tag": "transfer_red",
+      "layer": "L1",
+      "group": "reference",
+      "source": "sim robocon_013.obj top landing; rule 2.18",
+      "color": "#f5aa3c",
+      "sim_z_range_m": [
+        0.45,
+        0.6
+      ]
+    },
+    {
+      "type": "rect",
+      "cx": -3500.0,
+      "cy": -2550.0,
+      "w": 1000.0,
+      "h": 300.0000000000003,
+      "name": "台阶1(红)",
+      "tag": "stair_tread",
+      "layer": "L1",
+      "group": "reference",
+      "source": "sim exposed top robocon_010.obj",
+      "color": "#8b6f61",
+      "sim_z_range_m": [
+        0.0,
+        0.15
+      ]
+    },
+    {
+      "type": "rect",
+      "cx": -3500.0,
+      "cy": -2250.0,
+      "w": 1000.0,
+      "h": 299.99999999999983,
+      "name": "台阶2(红)",
+      "tag": "stair_tread",
+      "layer": "L1",
+      "group": "reference",
+      "source": "sim exposed top robocon_011.obj",
+      "color": "#8b6f61",
+      "sim_z_range_m": [
+        0.15,
+        0.3
+      ]
+    },
+    {
+      "type": "rect",
+      "cx": -3500.0,
+      "cy": -1950.0000000000002,
+      "w": 1000.0,
+      "h": 300.00000000000006,
+      "name": "台阶3(红)",
+      "tag": "stair_tread",
+      "layer": "L1",
+      "group": "reference",
+      "source": "sim exposed top robocon_012.obj",
+      "color": "#8b6f61",
+      "sim_z_range_m": [
+        0.3,
+        0.45
+      ]
+    },
+    {
+      "type": "rect",
+      "cx": -1650.0,
+      "cy": 0.0,
+      "w": 300.00000000000006,
+      "h": 1000.0,
+      "name": "L1→L2台阶(红)",
+      "tag": "l2_step",
+      "layer": "L1",
+      "group": "reference",
+      "source": "sim robocon_019.obj; rule 2.17",
+      "color": "#e8b4b4",
+      "sim_z_range_m": [
+        0.6,
+        0.75
+      ]
+    },
+    {
+      "type": "rect",
+      "cx": 3500.0,
+      "cy": 950.0000000000001,
+      "w": 1000.0,
+      "h": 3500.0,
+      "name": "坡道(蓝)",
+      "tag": "ramp_blue",
+      "layer": "L1",
+      "group": "reference",
+      "source": "sim robocon_014.obj; rule 2.16",
+      "color": "#9dc6e0",
+      "sim_z_range_m": [
+        -0.0,
+        0.596619
+      ]
+    },
+    {
+      "type": "rect",
+      "cx": 3500.0,
+      "cy": -2250.0,
+      "w": 1000.0,
+      "h": 900.0000000000001,
+      "name": "阶梯(蓝)",
+      "tag": "stair_blue",
+      "layer": "L1",
+      "group": "reference",
+      "source": "sim exposed treads robocon_015~017.obj; rule 2.16",
+      "color": "#9dc6e0",
+      "sim_z_range_m": [
+        0.0,
+        0.45
+      ]
+    },
+    {
+      "type": "rect",
+      "cx": 3500.0,
+      "cy": -1300.0,
+      "w": 1000.0,
+      "h": 1000.0,
+      "name": "传递区(蓝)",
+      "tag": "transfer_blue",
+      "layer": "L1",
+      "group": "reference",
+      "source": "sim robocon_018.obj top landing; rule 2.18",
+      "color": "#f5aa3c",
+      "sim_z_range_m": [
+        0.45,
+        0.6
+      ]
+    },
+    {
+      "type": "rect",
+      "cx": 3500.0,
+      "cy": -2550.0,
+      "w": 1000.0,
+      "h": 300.0000000000003,
+      "name": "台阶1(蓝)",
+      "tag": "stair_tread",
+      "layer": "L1",
+      "group": "reference",
+      "source": "sim exposed top robocon_015.obj",
+      "color": "#8b6f61",
+      "sim_z_range_m": [
+        0.0,
+        0.15
+      ]
+    },
+    {
+      "type": "rect",
+      "cx": 3500.0,
+      "cy": -2250.0,
+      "w": 1000.0,
+      "h": 299.99999999999983,
+      "name": "台阶2(蓝)",
+      "tag": "stair_tread",
+      "layer": "L1",
+      "group": "reference",
+      "source": "sim exposed top robocon_016.obj",
+      "color": "#8b6f61",
+      "sim_z_range_m": [
+        0.15,
+        0.3
+      ]
+    },
+    {
+      "type": "rect",
+      "cx": 3500.0,
+      "cy": -1950.0000000000002,
+      "w": 1000.0,
+      "h": 300.00000000000006,
+      "name": "台阶3(蓝)",
+      "tag": "stair_tread",
+      "layer": "L1",
+      "group": "reference",
+      "source": "sim exposed top robocon_017.obj",
+      "color": "#8b6f61",
+      "sim_z_range_m": [
+        0.3,
+        0.45
+      ]
+    },
+    {
+      "type": "rect",
+      "cx": 1650.0,
+      "cy": 0.0,
+      "w": 300.00000000000006,
+      "h": 1000.0,
+      "name": "L1→L2台阶(蓝)",
+      "tag": "l2_step",
+      "layer": "L1",
+      "group": "reference",
+      "source": "sim robocon_020.obj; rule 2.17",
+      "color": "#9dc6e0",
+      "sim_z_range_m": [
+        0.6,
+        0.75
+      ]
+    },
+    {
+      "type": "rect",
+      "cx": 2750.0,
+      "cy": -2750.0,
+      "w": 500.0,
+      "h": 500.0,
+      "name": "建塔处",
+      "tag": "build_pad",
+      "layer": "L1",
+      "group": "reference",
+      "source": "sim robocon_008.obj",
+      "color": "#3a885a",
+      "sim_z_range_m": [
+        0.602,
+        0.602
+      ]
+    },
+    {
+      "type": "rect",
+      "cx": -0.0,
+      "cy": -2750.0,
+      "w": 500.0,
+      "h": 500.0,
+      "name": "建塔处",
+      "tag": "build_pad",
+      "layer": "L1",
+      "group": "reference",
+      "source": "sim robocon_008.obj",
+      "color": "#3a885a",
+      "sim_z_range_m": [
+        0.603,
+        0.603
+      ]
+    },
+    {
+      "type": "rect",
+      "cx": -2750.0,
+      "cy": -2750.0,
+      "w": 500.0,
+      "h": 500.0,
+      "name": "建塔处",
+      "tag": "build_pad",
+      "layer": "L1",
+      "group": "reference",
+      "source": "sim robocon_008.obj",
+      "color": "#3a885a",
+      "sim_z_range_m": [
+        0.602,
+        0.602
+      ]
+    },
+    {
+      "type": "rect",
+      "cx": 2750.0,
+      "cy": 2750.0,
+      "w": 500.0,
+      "h": 500.0,
+      "name": "建塔处",
+      "tag": "build_pad",
+      "layer": "L1",
+      "group": "reference",
+      "source": "sim robocon_008.obj",
+      "color": "#3a885a",
+      "sim_z_range_m": [
+        0.602,
+        0.602
+      ]
+    },
+    {
+      "type": "rect",
+      "cx": -2750.0,
+      "cy": 2750.0,
+      "w": 500.0,
+      "h": 500.0,
+      "name": "建塔处",
+      "tag": "build_pad",
+      "layer": "L1",
+      "group": "reference",
+      "source": "sim robocon_008.obj",
+      "color": "#3a885a",
+      "sim_z_range_m": [
+        0.602,
+        0.602
+      ]
+    },
+    {
+      "type": "rect",
+      "cx": -0.0,
+      "cy": 2750.0,
+      "w": 500.0,
+      "h": 500.0,
+      "name": "建塔处",
+      "tag": "build_pad",
+      "layer": "L1",
+      "group": "reference",
+      "source": "sim robocon_008.obj",
+      "color": "#3a885a",
+      "sim_z_range_m": [
+        0.603,
+        0.603
+      ]
+    },
+    {
+      "type": "rect",
+      "cx": 1250.0,
+      "cy": -1250.0,
+      "w": 500.0,
+      "h": 500.0,
+      "name": "建塔处",
+      "tag": "build_pad",
+      "layer": "L2",
+      "group": "reference",
+      "source": "sim robocon_008.obj",
+      "color": "#3a885a",
+      "sim_z_range_m": [
+        0.901,
+        0.901
+      ]
+    },
+    {
+      "type": "rect",
+      "cx": 1250.0,
+      "cy": 1250.0,
+      "w": 500.0,
+      "h": 500.0,
+      "name": "建塔处",
+      "tag": "build_pad",
+      "layer": "L2",
+      "group": "reference",
+      "source": "sim robocon_008.obj",
+      "color": "#3a885a",
+      "sim_z_range_m": [
+        0.901,
+        0.901
+      ]
+    },
+    {
+      "type": "rect",
+      "cx": -1250.0,
+      "cy": 1250.0,
+      "w": 500.0,
+      "h": 500.0,
+      "name": "建塔处",
+      "tag": "build_pad",
+      "layer": "L2",
+      "group": "reference",
+      "source": "sim robocon_008.obj",
+      "color": "#3a885a",
+      "sim_z_range_m": [
+        0.901,
+        0.901
+      ]
+    },
+    {
+      "type": "rect",
+      "cx": -1250.0,
+      "cy": -1250.0,
+      "w": 500.0,
+      "h": 500.0,
+      "name": "建塔处",
+      "tag": "build_pad",
+      "layer": "L2",
+      "group": "reference",
+      "source": "sim robocon_008.obj",
+      "color": "#3a885a",
+      "sim_z_range_m": [
+        0.901,
+        0.901
+      ]
+    }
+  ],
+  "background": {}
+}

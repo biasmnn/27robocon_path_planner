@@ -1,0 +1,24 @@
+# Python environments and caches
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Generated routes, screenshots, packaging dependencies and executables
+/out/
+/dist/
+/build/
+*.spec
+*.exe
+*.zip
+
+# Local backups and editor files
+*.bak
+*.tmp
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+.env
+.env.*
