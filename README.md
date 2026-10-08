@@ -118,13 +118,12 @@ python build_exe.py
 ├── *selftest.py / uitest.py  路线、物理语义与UI测试
 ├── build_template_from_sim.py / probe_sim_field.py
 ├── build_exe.py / exe_entry.py / exe_smoke.py
-├── docs/                    截图、GitHub发布说明
+├── docs/                    截图
 ├── .github/workflows/       Windows基础验收
 ├── dist/                    本地EXE；Git忽略
 └── out/                     运行与打包产物；Git忽略
 ```
 
-上传方法见[GitHub发布说明](docs/GITHUB.md)。该整理版未添加开源许可证。
 
 ## 当前边界
 
